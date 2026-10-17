@@ -23,7 +23,7 @@ Highlights:
 ## Install
 
 ```bash
-pi install npm:pi-deepseek-websearch
+pi install npm:@thehuan/pi-deepseek-websearch
 ```
 
 From a local checkout (development):
@@ -230,8 +230,8 @@ node scripts/toolflow.ts                         # execute both tools, cache/pag
 
 ```bash
 npm version patch|minor        # bump + tag
-npm publish                    # publishes src/, README, LICENSE, CHANGELOG
-pi install npm:pi-deepseek-websearch
+npm publish                    # scoped public package (publishConfig.access=public)
+pi install npm:@thehuan/pi-deepseek-websearch
 ```
 
 The `pi-package` keyword is what makes the package discoverable in the pi package gallery.

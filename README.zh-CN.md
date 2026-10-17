@@ -23,7 +23,7 @@ English: [README.md](README.md)
 ## 安装
 
 ```bash
-pi install npm:pi-deepseek-websearch
+pi install npm:@thehuan/pi-deepseek-websearch
 ```
 
 本地开发：
@@ -227,8 +227,8 @@ node scripts/toolflow.ts                         # 执行两个工具、缓存/�
 
 ```bash
 npm version patch|minor        # 升版本并打 tag
-npm publish                    # 发布 src/、README、LICENSE、CHANGELOG
-pi install npm:pi-deepseek-websearch
+npm publish                    # scope 包默认公开（publishConfig.access=public）
+pi install npm:@thehuan/pi-deepseek-websearch
 ```
 
 `pi-package` 关键字是 pi 包市场发现本包的依据。

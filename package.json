@@ -1,5 +1,5 @@
 {
-  "name": "pi-deepseek-websearch",
+  "name": "@thehuan/pi-deepseek-websearch",
   "version": "0.1.0",
   "description": "Native web search and page fetch tools for pi, powered by the DeepSeek Search API, with OS-encrypted API key storage.",
   "type": "module",
@@ -53,5 +53,8 @@
   "homepage": "https://github.com/thehuanlwd/pi-deepseek-websearch#readme",
   "bugs": {
     "url": "https://github.com/thehuanlwd/pi-deepseek-websearch/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

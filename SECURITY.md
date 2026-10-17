@@ -32,7 +32,7 @@ and no telemetry. The extension performs no analytics and writes no logs.
 ## Trust
 
 Like any pi extension, this code runs inside the pi process with your user permissions. Install it
-from npm (`pi install npm:pi-deepseek-websearch`) or from a checkout you reviewed. Project-local
+from npm (`pi install npm:@thehuan/pi-deepseek-websearch`) or from a checkout you reviewed. Project-local
 installs still require project trust.
 
 ## Supported versions
