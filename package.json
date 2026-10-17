@@ -4,7 +4,7 @@
   "description": "Native web search and page fetch tools for pi, powered by the DeepSeek Search API, with OS-encrypted API key storage.",
   "type": "module",
   "license": "MIT",
-  "author": "thehuan",
+  "author": "thehuanlwd",
   "keywords": [
     "pi-package",
     "pi",
@@ -37,13 +37,21 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
     "@earendil-works/pi-coding-agent": "*",
     "@earendil-works/pi-tui": "*",
-    "typebox": "*",
-    "@earendil-works/pi-ai": "*"
+    "typebox": "*"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "typescript": "^5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thehuanlwd/pi-deepseek-websearch.git"
+  },
+  "homepage": "https://github.com/thehuanlwd/pi-deepseek-websearch#readme",
+  "bugs": {
+    "url": "https://github.com/thehuanlwd/pi-deepseek-websearch/issues"
   }
 }
