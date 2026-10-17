@@ -2,6 +2,20 @@
 
 Native web search and page reading for [pi](https://pi.dev), backed by the official DeepSeek Search / Fetch API.
 
+## Quick start
+
+```bash
+pi install npm:@thehuan/pi-deepseek-websearch
+```
+
+Then start `pi`. If pi already has a DeepSeek credential (`/login deepseek` or `DEEPSEEK_API_KEY`),
+both tools work immediately; otherwise the first TUI start asks for the key once.
+
+[npm](https://www.npmjs.com/package/@thehuan/pi-deepseek-websearch) ·
+[pi package catalog](https://pi.dev/packages/@thehuan/pi-deepseek-websearch) ·
+[releases](https://github.com/thehuanlwd/pi-deepseek-websearch/releases) ·
+[中文说明](README.zh-CN.md)
+
 Two model-callable tools, no third-party fallback:
 
 | Tool | What it does |
@@ -17,21 +31,6 @@ Highlights:
 - **Silent when working** — no status bar entry, no startup banner.
 - **No surprises** — no fallback to Jina/Serp/other providers; requests only go to `api.deepseek.com`.
 - Bounded concurrency (4.5 QPS, below DeepSeek's 5 QPS account limit), retry with backoff on 408/429/5xx, and a session cache so repeated requests are not paid twice.
-
-中文说明：[README.zh-CN.md](README.zh-CN.md)
-
-## Install
-
-```bash
-pi install npm:@thehuan/pi-deepseek-websearch
-```
-
-From a local checkout (development):
-
-```bash
-pi install ./pi-deepseek-websearch   # add to settings
-pi -e ./pi-deepseek-websearch        # load for one run only
-```
 
 Requires pi 1.3.0 or newer (verified against 1.3.0).
 
@@ -206,6 +205,13 @@ Search queries and URLs are sent to DeepSeek. Nothing goes anywhere else — the
 | Key prompt keeps appearing | Set `promptOnStartup: false`, or keep a key in `DEEPSEEK_API_KEY` |
 
 ## Development
+
+Local install, without publishing:
+
+```bash
+pi install ./pi-deepseek-websearch   # add to settings
+pi -e ./pi-deepseek-websearch        # load for one run only
+```
 
 ```bash
 npm install                 # peer deps (pi host packages) + dev deps

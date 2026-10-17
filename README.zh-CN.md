@@ -2,6 +2,20 @@
 
 给 [pi](https://pi.dev) 加上原生的联网搜索与网页阅读能力，基于 DeepSeek 官方 Search / Fetch 接口。
 
+## 快速安装
+
+```bash
+pi install npm:@thehuan/pi-deepseek-websearch
+```
+
+然后启动 `pi`：如果 pi 里已经配置过 DeepSeek 凭据（`/login deepseek` 或 `DEEPSEEK_API_KEY`），
+两个工具立即可用；否则首次进入 TUI 时会弹一次 Key 输入框。
+
+[npm](https://www.npmjs.com/package/@thehuan/pi-deepseek-websearch) ·
+[pi 包市场](https://pi.dev/packages/@thehuan/pi-deepseek-websearch) ·
+[Release](https://github.com/thehuanlwd/pi-deepseek-websearch/releases) ·
+[English](README.md)
+
 两个模型可调用的工具，**不引入任何第三方兜底**：
 
 | 工具 | 作用 |
@@ -17,21 +31,6 @@
 - **正常工作时完全无感**：没有状态栏、没有启动横幅
 - **干净**：请求只发往 `api.deepseek.com`，没有搜索兜底、没有阅读代理
 - 进程内限速 4.5 QPS（低于官方账号级 5 QPS），408/429/5xx 自动退避重试，会话级缓存避免重复计费
-
-English: [README.md](README.md)
-
-## 安装
-
-```bash
-pi install npm:@thehuan/pi-deepseek-websearch
-```
-
-本地开发：
-
-```bash
-pi install ./pi-deepseek-websearch   # 写入 settings
-pi -e ./pi-deepseek-websearch        # 仅本次运行加载
-```
 
 需要 pi 1.3.0 或更新版本（已在 1.3.0 上验证）。
 
@@ -203,6 +202,13 @@ pi 处理工具名的实际行为（已在 1.3.0 验证）：
 | 反复弹 Key 输入 | 把 `promptOnStartup` 设为 `false`，或用 `DEEPSEEK_API_KEY` |
 
 ## 开发
+
+本地安装（不发布）：
+
+```bash
+pi install ./pi-deepseek-websearch   # 写入 settings
+pi -e ./pi-deepseek-websearch        # 仅本次运行加载
+```
 
 ```bash
 npm install                 # 安装 peer（pi 宿主包）与开发依赖
